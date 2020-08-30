@@ -14,7 +14,7 @@ categories = ["command-line-utilities", "network-programming"]
 
 [dependencies]
 ipnetwork = "0.16.0"
-pnet = "0.26.0"
+pnet_datalink = "0.26.0"
 
 [target.'cfg(windows)'.dependencies]
 netifs = { git = "https://github.com/zhxie/netifs-rs" }

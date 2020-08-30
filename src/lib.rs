@@ -1,4 +1,4 @@
-use pnet::datalink::{self, MacAddr};
+use pnet_datalink::{self, MacAddr};
 use std::fmt::{self, Display, Formatter};
 use std::net::Ipv4Addr;
 
@@ -99,7 +99,7 @@ impl Display for Interface {
 
 /// Gets a list of available network interfaces for the current machine.
 pub fn interfaces() -> Vec<Interface> {
-    let inters = datalink::interfaces();
+    let inters = pnet_datalink::interfaces();
 
     let ifs = inters
         .iter()
