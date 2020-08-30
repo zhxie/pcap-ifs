@@ -1,0 +1,23 @@
+[package]
+name = "pcap-ifs"
+version = "0.1.0"
+authors = ["Xie Zhihao <xzh1206@gmail.com>"]
+edition = "2018"
+description = "List network interfaces with pcap."
+readme = "README.md"
+repository = "https://github.com/zhxie/pcap-ifs"
+license = "MIT"
+keywords = ["network interface", "pcap"]
+categories = ["command-line-utilities", "network-programming"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ipnetwork = "0.16.0"
+pnet = "0.26.0"
+
+[target.'cfg(windows)'.dependencies]
+netifs = { git = "https://github.com/zhxie/netifs-rs" }
+
+[target.'cfg(not(windows))'.dependencies]
+interfaces = "0.0.4"
